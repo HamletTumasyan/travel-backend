@@ -1,0 +1,13 @@
+model ContactPageFormContent {
+    id                              String   @id @default(uuid())
+    lang                            String
+    title                           String
+    form_input_name_placeholder     String
+    form_input_email_placeholder    String
+    form_input_message_placeholder  String
+    btn_text                        String
+    form_send_successfully          String
+    form_send_error                 String
+    createdAt                       DateTime @default(now())
+    updatedAt                       DateTime @updatedAt
+}

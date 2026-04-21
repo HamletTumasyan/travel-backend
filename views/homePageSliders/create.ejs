@@ -1,0 +1,34 @@
+<div class="action">
+    <h1>
+        <%= title %>
+    </h1>
+
+    <form action="/admin/<%= activeRoute %>/add" method="post" enctype="multipart/form-data">
+
+        <label for="lang">Language <span>*</span></label>
+
+        <select name="lang" class="lang-selector" required>
+            <option value="" disabled selected>Choose Language</option>
+
+            <% langs.forEach((elem)=> { %>
+                <option value="<%= elem.code %>">
+                    <%= elem.code %>
+                </option>
+                <% }); %>
+
+        </select>
+        <label for="title">Title <span>*</span></label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="descr">Description <span>*</span></label>
+        <textarea type="text" id="descr" name="descr" required></textarea>
+
+        <label for="image">Image <span>*</span></label>
+        <input type="file" accept="image/*" id="image" name="image" required>
+
+        <img id="preview" src="" alt="Image preview" class="image-preview">
+
+        <button type="submit" class="submit">Create</button>
+
+    </form>
+</div>

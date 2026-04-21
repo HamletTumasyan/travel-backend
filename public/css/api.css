@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    transition: all .2s linear;
+}
+
+.api-page {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.api-page .api-list {
+    list-style-position: inside;
+}
+
+.api-page .api-list li {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.api-page a {
+    text-decoration: none;
+    color: #008bff;
+    font-family: 'Ubuntu Mono';
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.api-page a:hover {
+    text-decoration: underline;
+}

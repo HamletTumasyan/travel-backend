@@ -1,0 +1,19 @@
+model FooterLabel {
+  id          Int          @id @default(autoincrement())
+  lang        String
+  title       String
+  credit      String
+  socialLinks SocialLink[] 
+
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model SocialLink {
+  id            Int         @id @default(autoincrement())
+  footerLabelId Int
+  image         String
+  url           String
+
+  footerLabel   FooterLabel @relation(fields: [footerLabelId], references: [id], onDelete: Cascade)
+}

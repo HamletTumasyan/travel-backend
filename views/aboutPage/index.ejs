@@ -1,0 +1,163 @@
+<div class="head">
+    <h1>
+        <%= title %>
+    </h1>
+</div>
+
+<div class="section">
+    <h2>Intros</h2>
+    <div class="right-side">
+        <form action="/admin/about-page-intros/bulk-delete" id="bulk-delete-intros-form" method="post">
+            <input type="hidden" name="ids" id="selected-intros-ids">
+            <button type="submit" id="delete-intros-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected intros
+            </button>
+        </form>
+        <a href="/admin/about-page-intros/create" class="create-btn">Add Intro</a>
+    </div>
+</div>
+
+<% if (introsData && introsData.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all-intros"></td>
+                <th>N</th>
+                <th>Lang</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Details</th>
+            </tr>
+            <% introsData.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox-intros" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <%= elem.title %>
+                    </td>
+                    <td>
+                        <%= elem.descr.slice(0, 50) + '...' %>
+                    </td>
+                    <td>
+                        <a href="/admin/about-page-intros/<%= elem.id %>" class="action">View</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+<% } else { %>
+    <p class="no-data-text">No intros yet.</p>
+<% } %>
+
+<div class="section">
+    <h2>Teams</h2>
+    <div class="right-side">
+        <form action="/admin/about-page-teams/bulk-delete" id="bulk-delete-teams-form" method="post">
+            <input type="hidden" name="ids" id="selected-teams-ids">
+            <button type="submit" id="delete-teams-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected teams
+            </button>
+        </form>
+        <a href="/admin/about-page-teams/create" class="create-btn">Add Team</a>
+    </div>
+</div>
+
+<% if (teamsData && teamsData.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all-teams"></td>
+                <th>N</th>
+                <th>Lang</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Profession</th>
+                <th>Details</th>
+            </tr>
+            <% teamsData.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox-teams" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <a href="<%= elem.image %>" target="_blank">
+                            <img src="<%= elem.image %>" alt="<%= elem.name %>">
+                        </a>
+                    </td>
+                    <td>
+                        <%= elem.name %>
+                    </td>
+                    <td>
+                        <%= elem.profession %>
+                    </td>
+                    <td>
+                        <a href="/admin/about-page-teams/<%= elem.id %>" class="action">View</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+<% } else { %>
+    <p class="no-data-text">No teams yet.</p>
+<% } %>
+
+<div class="section">
+    <h2>Headings</h2>
+    <div class="right-side">
+        <form action="/admin/about-team-headings/bulk-delete" id="bulk-delete-headings-form" method="post">
+            <input type="hidden" name="ids" id="selected-headings-ids">
+            <button type="submit" id="delete-headings-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected headings
+            </button>
+        </form>
+        <a href="/admin/about-team-headings/create" class="create-btn">Add Heading</a>
+    </div>
+</div>
+
+<% if (headingsData && headingsData.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all-headings"></td>
+                <th>N</th>
+                <th>Lang</th>
+                <th>Title</th>
+                <th>Details</th>
+            </tr>
+            <% headingsData.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox-headings" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <%= elem.title %>
+                    </td>
+                    <td>
+                        <a href="/admin/about-team-headings/<%= elem.id %>" class="action">View</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+<% } else { %>
+    <p class="no-data-text">No headings yet.</p>
+<% } %>

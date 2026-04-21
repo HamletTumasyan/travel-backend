@@ -1,0 +1,438 @@
+{
+    "logos": {
+        "id": 1,
+        "title": "TRAVEL"
+    },
+    "navbars": [
+        {
+            "id": 1,
+            "lang": "en",
+            "title": "Home",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "lang": "en",
+            "title": "About",
+            "url": "/about"
+        },
+        {
+            "id": 3,
+            "lang": "en",
+            "title": "Contact",
+            "url": "/contact"
+        },
+        {
+            "id": 4,
+            "lang": "am",
+            "title": "Գլխավոր",
+            "url": "/"
+        },
+        {
+            "id": 5,
+            "lang": "am",
+            "title": "Մեր մասին",
+            "url": "/about"
+        },
+        {
+            "id": 6,
+            "lang": "am",
+            "title": "Կապ մեզ հետ",
+            "url": "/contact"
+        }
+    ],
+    "languages": [
+        {
+            "id": 1,
+            "code": "en"
+        },
+        {
+            "id": 2,
+            "code": "am"
+        }
+    ],
+    "home_page_sliders": [
+        {
+            "id": 1,
+            "lang": "en",
+            "image": "/images/slider/slide1.jpg",
+            "title": "Home",
+            "descr": "Welcome to our homepage"
+        },
+        {
+            "id": 2,
+            "lang": "en",
+            "image": "/images/slider/slide2.jpg",
+            "title": "About",
+            "descr": "Learn more about us"
+        },
+        {
+            "id": 3,
+            "lang": "en",
+            "image": "/images/slider/slide3.jpg",
+            "title": "Services",
+            "descr": "What we can do for you"
+        },
+        {
+            "id": 4,
+            "lang": "am",
+            "image": "/images/slider/slide1.jpg",
+            "title": "Գլխավոր",
+            "descr": "Բարի գալուստ մեր գլխավոր էջ"
+        },
+        {
+            "id": 5,
+            "lang": "am",
+            "image": "/images/slider/slide2.jpg",
+            "title": "Մեր մասին",
+            "descr": "Իմացեք ավելին մեր մասին"
+        },
+        {
+            "id": 6,
+            "lang": "am",
+            "image": "/images/slider/slide3.jpg",
+            "title": "Մեր ծառայությունները",
+            "descr": "Ինչ կարող ենք անել ձեզ համար"
+        }
+    ],
+    "home_page_packages_headings": [
+        {
+            "id": "1",
+            "lang": "en",
+            "title": "Our packages"
+        },
+        {
+            "id": "2",
+            "lang": "am",
+            "title": "Մեր փաթեթները"
+        }
+    ],
+    "homepage_packages": [
+        {
+            "id": "1",
+            "lang": "en",
+            "discount": "10%",
+            "image": "/images/packages/g1-london.png",
+            "title": "London",
+            "price": 12.99
+        },
+        {
+            "id": "2",
+            "lang": "en",
+            "discount": "15%",
+            "image": "/images/packages/g2-dubai.png",
+            "title": "Dubai",
+            "price": 15.49
+        },
+        {
+            "id": "3",
+            "lang": "en",
+            "discount": "20%",
+            "image": "/images/packages/g3-paris.png",
+            "title": "Paris",
+            "price": 13.99
+        },
+        {
+            "id": "4",
+            "lang": "en",
+            "discount": "15%",
+            "image": "/images/packages/g4-montenegro.png",
+            "title": "Montenegro",
+            "price": 14.99
+        },
+        {
+            "id": "5",
+            "lang": "en",
+            "discount": "30%",
+            "image": "/images/packages/g5-egypt.png",
+            "title": "Egypt",
+            "price": 10.99
+        },
+        {
+            "id": "6",
+            "lang": "en",
+            "discount": "15%",
+            "image": "/images/packages/g6-australia.png",
+            "title": "Australia",
+            "price": 16.49
+        },
+        {
+            "id": "7",
+            "lang": "en",
+            "discount": "10%",
+            "image": "/images/packages/g7-rome.png",
+            "title": "Rome",
+            "price": 14.49
+        },
+        {
+            "id": "8",
+            "lang": "en",
+            "discount": "25%",
+            "image": "/images/packages/g8-sakura.png",
+            "title": "Sakura",
+            "price": 17.99
+        },
+        {
+            "id": "9",
+            "lang": "en",
+            "discount": "10%",
+            "image": "/images/packages/g9-ovchovitsa.png",
+            "title": "Ovchovitsa",
+            "price": 11.49
+        },
+        {
+            "id": "10",
+            "lang": "am",
+            "discount": "10%",
+            "image": "/images/packages/g1-london.png",
+            "title": "Լոնդոն",
+            "price": 12.99
+        },
+        {
+            "id": "11",
+            "lang": "am",
+            "discount": "15%",
+            "image": "/images/packages/g2-dubai.png",
+            "title": "Դուբայ",
+            "price": 15.49
+        },
+        {
+            "id": "12",
+            "lang": "am",
+            "discount": "20%",
+            "image": "/images/packages/g3-paris.png",
+            "title": "Փարիզ",
+            "price": 13.99
+        },
+        {
+            "id": "13",
+            "lang": "am",
+            "discount": "15%",
+            "image": "/images/packages/g4-montenegro.png",
+            "title": "Մոնտենեգրո",
+            "price": 14.99
+        },
+        {
+            "id": "14",
+            "lang": "am",
+            "discount": "30%",
+            "image": "/images/packages/g5-egypt.png",
+            "title": "Եգիպտոս",
+            "price": 10.99
+        },
+        {
+            "id": "15",
+            "lang": "am",
+            "discount": "15%",
+            "image": "/images/packages/g6-australia.png",
+            "title": "Ավստրալիա",
+            "price": 16.49
+        },
+        {
+            "id": "16",
+            "lang": "am",
+            "discount": "10%",
+            "image": "/images/packages/g7-rome.png",
+            "title": "Հռոմ",
+            "price": 14.49
+        },
+        {
+            "id": "17",
+            "lang": "am",
+            "discount": "25%",
+            "image": "/images/packages/g8-sakura.png",
+            "title": "Սակուրա",
+            "price": 17.99
+        },
+        {
+            "id": "18",
+            "lang": "am",
+            "discount": "10%",
+            "image": "/images/packages/g9-ovchovitsa.png",
+            "title": "Օվչովիցա",
+            "price": 11.49
+        }
+    ],
+    "aboutpage_intros": [
+        {
+            "id": 1,
+            "lang": "en",
+            "title": "About us",
+            "descr": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+            "id": 2,
+            "lang": "am",
+            "title": "Մեր մասին",
+            "descr": "Լորեմ Իպսումը տպագրության և տպագրական արդյունաբերության համար նախատեսված մոդելային տեքստ է։ Սկսած 1500-ականներից՝ Լորեմ Իպսումը հանդիսացել է տպագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է։ Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ՝ մնալով էապես անփոփոխ։"
+        }
+    ],
+    "aboutpage_team_headings": [
+        {
+            "id": 1,
+            "title": "Our Team"
+        },
+        {
+            "id": 2,
+            "title": "Մեր թիմը"
+        }
+    ],
+    "aboutpage_teams": [
+        {
+            "id": "1",
+            "lang": "en",
+            "image": "/images/team/worker1.jpg",
+            "name": "John Doe",
+            "profession": "Manager"
+        },
+        {
+            "id": "2",
+            "lang": "en",
+            "image": "/images/team/worker2.jpg",
+            "name": "Emily Clark",
+            "profession": "Administrator"
+        },
+        {
+            "id": "3",
+            "lang": "en",
+            "image": "/images/team/worker3.jpg",
+            "name": "Daniel Brown",
+            "profession": "Team lead developers"
+        },
+        {
+            "id": "4",
+            "lang": "en",
+            "image": "/images/team/worker4.jpg",
+            "name": "Jessica Hall",
+            "profession": "Developer"
+        },
+        {
+            "id": "5",
+            "lang": "en",
+            "image": "/images/team/worker5.jpg",
+            "name": "Olivia Wilson",
+            "profession": "Developer"
+        },
+        {
+            "id": "6",
+            "lang": "en",
+            "image": "/images/team/worker6.jpg",
+            "name": "William Miller",
+            "profession": "Developer"
+        },
+        {
+            "id": "7",
+            "lang": "am",
+            "image": "/images/team/worker1.jpg",
+            "name": "Ջոն Դո",
+            "profession": "Մենեջեր"
+        },
+        {
+            "id": "8",
+            "lang": "am",
+            "image": "/images/team/worker2.jpg",
+            "name": "Էմիլի Կլարկ",
+            "profession": "Ադմինիստրատոր"
+        },
+        {
+            "id": "9",
+            "lang": "am",
+            "image": "/images/team/worker3.jpg",
+            "name": "Դանիել Բրաուն",
+            "profession": "Ծրագրավորման թիմի ղեկավար"
+        },
+        {
+            "id": "10",
+            "lang": "am",
+            "image": "/images/team/worker4.jpg",
+            "name": "Ջեսիկա Հոլ",
+            "profession": "Ծրագրավորող"
+        },
+        {
+            "id": "11",
+            "lang": "am",
+            "image": "/images/team/worker5.jpg",
+            "name": "Օլիվիա Ուիլսոն",
+            "profession": "Ծրագրավորող"
+        },
+        {
+            "id": "12",
+            "lang": "am",
+            "image": "/images/team/worker6.jpg",
+            "name": "Վիլյամ Միլլեր",
+            "profession": "Ծրագրավորող"
+        }
+    ],
+    "contactpage_form_contents": [
+        {
+            "id": 1,
+            "lang": "en",
+            "title": "Your message",
+            "form_input_name_placeholder": "Enter your name",
+            "form_input_email_placeholder": "Enter your email",
+            "form_input_message_placeholder": "Enter your message",
+            "btn_text": "Send",
+            "form_send_successfully": "Your email has been sent successfully.",
+            "form_send_error": "An error occurred."
+        },
+        {
+            "id": 2,
+            "lang": "am",
+            "title": "Ձեր նամակը մեզ",
+            "form_input_name_placeholder": "Մուտքագրեք Ձեր անունը",
+            "form_input_email_placeholder": "Մուտքագրեք Ձեր էլ․փոստը",
+            "form_message_placeholder": "Մուտքագրեք Ձեր նամակը",
+            "btn_text": "Ուղարկել",
+            "form_send_successfully": "Ձեր նամակը ուղարկվել է հաջողությամբ։",
+            "form_send_error": "Տեղի ունեցավ սխալ։"
+        }
+    ],
+    "footer_labels": [
+        {
+            "id": 1,
+            "lang": "en",
+            "title": "TRAVEL",
+            "credit": "Created by Hamlet Tumasyan | all rights reserved!",
+            "social_links": [
+                {
+                    "id": 1,
+                    "image": "/images/footer/facebook.svg",
+                    "url": "https://www.facebook.com/"
+                },
+                {
+                    "id": 2,
+                    "image": "/images/footer/instagram.svg",
+                    "url": "https://www.instagram.com/"
+                },
+                {
+                    "id": 3,
+                    "image": "/images/footer/twitter.svg",
+                    "url": "https://x.com/?lang=en"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "lang": "am",
+            "title": "TRAVEL",
+            "credit": "Ստեղծվել է Համլետ Թումասյանի կողմից | բոլոր իրավունքները պաշտպանված են!",
+            "social_links": [
+                {
+                    "id": 1,
+                    "image": "/images/footer/facebook.svg",
+                    "url": "https://www.facebook.com/"
+                },
+                {
+                    "id": 2,
+                    "image": "/images/footer/instagram.svg",
+                    "url": "https://www.instagram.com/"
+                },
+                {
+                    "id": 3,
+                    "image": "/images/footer/twitter.svg",
+                    "url": "https://x.com/?lang=hy"
+                }
+            ]
+        }
+    ]
+}

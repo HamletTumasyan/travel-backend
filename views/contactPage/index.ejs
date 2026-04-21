@@ -1,0 +1,57 @@
+<div class="head">
+    <h1>
+        <%= title %>
+    </h1>
+
+    <div class="right-side">
+        <form action="/admin/<%= activeRoute %>/bulk-delete" id="bulk-delete-form" method="post">
+            <input type="hidden" name="ids" id="selected-ids">
+            <button type="submit" id="delete-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected items
+            </button>
+        </form>
+
+        <a href="/admin/<%= activeRoute %>/create" class="create-btn">Create new <%= title.toLowerCase() %></a>
+    </div>
+
+</div>
+
+<% if (data.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all"></td>
+
+                <th>N</th>
+                <th>Lang</th>
+                <th>Title</th>
+                <th>Details</th>
+            </tr>
+
+            <% data.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <%= elem.title %>
+                    </td>
+
+                    <td>
+                        <a href="/admin/<%= activeRoute %>/<%= elem.id %>" class="action">View</a>
+                    </td>
+
+                </tr>
+
+                <% }) %>
+        </table>
+    </div>
+<%} else { %>
+    <p class="no-data-text">No data yet.</p>
+<% } %>

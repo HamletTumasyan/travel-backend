@@ -1,0 +1,70 @@
+header {
+    background: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: .5px;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+header .right-side {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+header .user-menu {
+    position: relative;
+}
+
+header .user-menu .dropdown-menu {
+    background: #fff;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 5px 20px #0000003f;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+header .user-menu .dropdown-menu.active {
+    display: block;
+}
+
+header .user-menu .dropdown-menu .dropdown-user,
+header .user-menu .dropdown-menu .dropdown-link {
+    padding: 10px 16px;
+    color: #333;
+    font-size: 14px;
+    display: block;
+
+
+}
+
+header .user-menu .dropdown-menu .dropdown-user {
+    cursor: default;
+}
+
+header .user-menu .dropdown-menu .logout-link {
+    color: #d9534f;
+}
+
+header .right-side .theme-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

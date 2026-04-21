@@ -1,0 +1,11 @@
+<div class="action">
+  <h1> <%= title %> </h1>   
+
+    <form action="/admin/<%= activeRoute %>/edit/<%= data.id %>" method="post">
+        <label for="code">Code <span>*</span></label>
+        <input type="text" id="code" name="code" value="<%= data.code %>" required>
+
+        <button type="submit" class="submit">Update</button>
+
+    </form>
+</div>

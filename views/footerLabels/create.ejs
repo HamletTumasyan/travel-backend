@@ -1,0 +1,40 @@
+<div class="action">
+    <h1>
+        <%= title %>
+    </h1>
+
+    <form action="/admin/<%= activeRoute %>/add" method="post" enctype="multipart/form-data">
+        <label for="lang">Language <span>*</span></label>
+        <select id="lang" name="lang" class="lang-selector" required>
+            <option value="" disabled selected>Choose Language</option>
+            <% langs.forEach((elem)=> { %>
+                <option value="<%= elem.code %>">
+                    <%= elem.code %>
+                </option>
+                <% }); %>
+        </select>
+
+        <label for="title">Title <span>*</span></label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="credit">Credit <span>*</span></label>
+        <input type="text" id="credit" name="credit" required>
+
+        <hr style="margin: 30px 0;">
+        <h3>Initial Social Links (Optional)</h3>
+        <div id="social-links-container">
+            <div class="social-link-item">
+                <label>URL (e.g., https://facebook.com/) </label>
+                <input type="url" name="urls" placeholder="https://...">
+                <label>Social Icon Image</label>
+                <input type="file" accept="image/*" name="images" class="social-image-input">
+                <img src="" alt="Preview" class="image-preview">
+            </div>
+        </div>
+        <button type="button" id="add-more-links">+ Add Another Link</button>
+
+
+        <button type="submit" class="submit">Create</button>
+
+    </form>
+</div>

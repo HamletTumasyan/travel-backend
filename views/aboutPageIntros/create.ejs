@@ -1,0 +1,22 @@
+<div class="action">
+  <h1> <%= title %> </h1>
+
+    <form action="/admin/about-page-intros/add" method="post">
+        <label for="lang">Language <span>*</span></label>
+        <select id="lang" name="lang" class="lang-selector" required>
+            <option value="" disabled selected>Choose Language</option>
+            <% langs.forEach(lang => { %>
+                <option value="<%= lang.code %>"><%= lang.code %></option>
+            <% }) %>
+        </select>
+
+        <label for="title">Title <span>*</span></label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="descr">Description <span>*</span></label>
+        <textarea id="descr" name="descr" required></textarea>
+
+        <button type="submit" class="submit">Create</button>
+
+    </form>
+</div>

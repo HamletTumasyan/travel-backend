@@ -1,0 +1,142 @@
+ .admin-dashboard-links{
+    display: flex;
+    gap: 14px;
+ }
+ 
+ .admin-dashboard-links a{
+    border: 1px solid var(--primary-2);
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: var(--primary-2);
+    background-color: var(--btn-bg);
+    font-weight: bold;
+
+    &:hover{
+        transform: translateY(-2px);
+    }
+
+
+ }
+ 
+ 
+ .head {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 32px
+ }
+
+ .head h1 {
+     color: var(--text-color-1);
+ }
+
+ .section {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin: 40px 0 20px 0;
+ }
+
+ .section h2 {
+     color: var(--text-color-1);
+     font-size: 24px;
+ }
+
+ .section .right-side {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+
+ .head .delete-btn,
+ .head .create-btn,
+ .section .delete-btn,
+ .section .create-btn {
+     width: 230px;
+     text-align: center;
+     font-size: 16px;
+     border: 2px solid #bf3d4a;
+     background: #DB3545;
+     color: #fff;
+     padding: 7px 17px;
+     border-radius: 6px;
+
+     &:hover {
+         background: #c22838;
+     }
+ }
+
+ .head .right-side {
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+
+ .head .create-btn,
+ .section .create-btn {
+     background: var(--primary);
+     border: var(--primary);
+
+     &:hover {
+         background: var(--primary-hover);
+     }
+
+ }
+
+ .no-data-text {
+     font-size: 20px;
+     margin-top: -12px;
+     color: var(--text-color-1);
+ }
+
+ .table-wrapper {
+     overflow-x: auto;
+ }
+
+ .table-wrapper table {
+     border-collapse: collapse;
+     min-width: 500px;
+ }
+
+ .table-wrapper table tr:first-child {
+     background: var(--primary);
+     color: #fff;
+ }
+
+ .table-wrapper table tr,
+ .table-wrapper table th {
+     border: 1px solid #c7c3c3;
+     padding: 8px;
+     text-align: center;
+
+     &:first-child{
+        width: 40px;
+     }
+ }
+
+ .table-wrapper table td {
+     color: var(--text-color-1);
+ }
+
+
+ .table-wrapper table input[type=checkbox] {
+     accent-color: #DB3545;
+     width: 15px;
+     height: 15px;
+     cursor: pointer;
+     display: block;
+     margin: auto;
+ }
+
+
+ .table-wrapper table td img {
+     width: 100px;
+     height: 100px;
+     object-fit: cover;
+     border-radius: 6px;
+ }
+
+ .table-wrapper table .action {
+     color: var(--action-color);
+     padding: 0 1px;
+ }

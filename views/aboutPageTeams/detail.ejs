@@ -1,0 +1,37 @@
+<div class="action">
+    <h1>
+        <%= title %>
+    </h1>
+
+    <form action="/admin/about-page-teams/edit/<%= data.id %>" method="post" enctype="multipart/form-data">
+
+        <label for="lang">Language <span>*</span></label>
+
+        <select name="lang" class="lang-selector" required>
+            <option value="" disabled selected>Choose Language</option>
+
+            <% langs.forEach((elem)=> { %>
+                <option value="<%= elem.code %>" <%=data.lang===elem.code? "selected" : "" %>>
+                    <%= elem.code %>
+                </option>
+                <% }); %>
+
+        </select>
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" name="name" value="<%= data.name %>" required>
+
+        <label for="profession">Profession <span>*</span></label>
+        <input type="text" id="profession" name="profession" value="<%= data.profession %>" required>
+
+        <label for="image">Image <span>*</span></label>
+        <input type="hidden" name="oldImage" value="<%= data.image %>">
+
+        <div class="image-box">
+            <img id="preview" src="<%= data.image %>" class="image-preview active" alt="Current image">
+            <input type="file" accept="image/*" id="image" name="image" >
+        </div>
+
+        <button type="submit" class="submit">Update</button>
+
+    </form>
+</div>

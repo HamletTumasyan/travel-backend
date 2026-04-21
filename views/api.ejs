@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/api.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+
+    <div class="api-page">
+        <h1 class="title">
+            <%= title %>
+        </h1>
+
+        <h2 class="endpoint-title">Endpoints</h2>
+
+        <ul class="api-list">
+            <% data.forEach(elem=> { %>
+                <li><a href="<%= elem %>" target="_blank">
+                        <%= elem %>
+                    </a></li>
+                <% }) %>
+        </ul>
+    </div>
+</body>
+
+</html>

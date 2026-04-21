@@ -1,0 +1,11 @@
+<div class="action">
+  <h1> <%= title %> </h1>   
+
+    <form action="/admin/<%= activeRoute %>/add" method="post">
+        <label for="title">Title <span>*</span></label>
+        <input type="text" id="title" name="title" required>
+
+        <button type="submit" class="submit">Create</button>
+
+    </form>
+</div>

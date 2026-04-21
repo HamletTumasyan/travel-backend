@@ -1,0 +1,31 @@
+<div class="action">
+  <h1>
+    <%= title %>
+  </h1>
+
+  <form action="/admin/<%= activeRoute %>/edit/<%= data.id %>" method="post">
+
+    <label for="lang">Language <span>*</span></label>
+
+    <select name="lang" class="lang-selector" required>
+      <option value="" disabled selected>Choose Language</option>
+
+      <% langs.forEach((elem)=> { %>
+        <option value="<%= elem.code %>" <%=data.lang===elem.code? "selected" : "" %>>
+          <%= elem.code %>
+        </option>
+        <% }); %>
+
+    </select>
+
+
+    <label for="title">Title <span>*</span></label>
+    <input type="text" id="title" name="title" value="<%= data.title %>" required>
+
+    <label for="url">Url <span>*</span></label>
+    <input type="text" id="url" name="url" value="<%= data.url %>" required>
+
+    <button type="submit" class="submit">Update</button>
+
+  </form>
+</div>

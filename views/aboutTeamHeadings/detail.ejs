@@ -1,0 +1,18 @@
+<div class="action">
+  <h1> <%= title %> </h1>
+
+    <form action="/admin/about-team-headings/edit/<%= data.id %>" method="post">
+        <label for="lang">Language <span>*</span></label>
+        <select id="lang" name="lang" class="lang-selector" required>
+            <% langs.forEach(lang => { %>
+                <option value="<%= lang.code %>" <%= data.lang === lang.code ? 'selected' : '' %>><%= lang.code %></option>
+            <% }) %>
+        </select>
+
+        <label for="title">Title <span>*</span></label>
+        <input type="text" id="title" name="title" value="<%= data.title %>" required>
+
+        <button type="submit" class="submit">Update</button>
+
+    </form>
+</div>

@@ -1,0 +1,115 @@
+<div class="head">
+    <h1>
+        <%= title %>
+    </h1>
+</div>
+
+<div class="section">
+    <h2>Headings</h2>
+    <div class="right-side">
+        <form action="/admin/home-page-pckgs-head/bulk-delete" id="bulk-delete-headings-form" method="post">
+            <input type="hidden" name="ids" id="selected-headings-ids">
+            <button type="submit" id="delete-headings-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected headings
+            </button>
+        </form>
+        <a href="/admin/home-page-pckgs-head/create" class="create-btn">Add Heading</a>
+    </div>
+</div>
+
+<% if (headingsData && headingsData.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all-headings"></td>
+                <th>N</th>
+                <th>Lang</th>
+                <th>Title</th>
+                <th>Details</th>
+            </tr>
+            <% headingsData.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox-headings" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <%= elem.title %>
+                    </td>
+                    <td>
+                        <a href="/admin/home-page-pckgs-head/<%= elem.id %>" class="action">View</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+<% } else { %>
+    <p class="no-data-text">No headings yet.</p>
+<% } %>
+
+<div class="section">
+    <h2>Packages</h2>
+    <div class="right-side">
+        <form action="/admin/<%= activeRoute %>/bulk-delete" id="bulk-delete-packages-form" method="post">
+            <input type="hidden" name="ids" id="selected-packages-ids">
+            <button type="submit" id="delete-packages-btn" class="delete-btn" style="display: none;">
+                Delete 0 selected packages
+            </button>
+        </form>
+        <a href="/admin/<%= activeRoute %>/create" class="create-btn">Add Package</a>
+    </div>
+</div>
+
+<% if (packagesData && packagesData.length) { %>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td><input type="checkbox" id="select-all-packages"></td>
+                <th>N</th>
+                <th>Lang</th>
+                <th>Discount</th>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Details</th>
+            </tr>
+            <% packagesData.forEach((elem, index)=> { %>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="row-checkbox-packages" value="<%= elem.id %>">
+                    </td>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= elem.lang %>
+                    </td>
+                    <td>
+                        <%= elem.discount + ' %' %>
+                    </td>
+                    <td>
+                        <a href="<%= elem.image %>" target="_blank">
+                            <img src="<%= elem.image %>" alt="<%= elem.title %>">
+                        </a>
+                    </td>
+                    <td>
+                        <%= elem.title %>
+                    </td>
+                    <td>
+                        <%= elem.price + ' $' %>
+                    </td>
+                    <td>
+                        <a href="/admin/<%= activeRoute %>/<%= elem.id %>" class="action">View</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+<% } else { %>
+    <p class="no-data-text">No packages yet.</p>
+<% } %>
