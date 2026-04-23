@@ -34,7 +34,10 @@ export async function login_post(req, res, next) {
             username: user.username,
         };
 
-        res.redirect("/admin");
+        req.session.save((err) => {
+            if (err) return next(err);
+            res.redirect("/admin");
+        });
 
     } catch (error) {
         next(error);

@@ -1,96 +1,83 @@
 # Travel Admin Panel
 
-Express.js admin panel for managing travel website content.
+A professional, mobile-responsive Express.js admin panel designed for managing travel website content. Fully optimized for serverless deployment on Vercel.
 
-## Features
+## 🚀 Key Features
 
-- **Admin Dashboard** - Manage all website content
-- **Multi-language Support** - English & Armenian
-- **Image Upload** - Upload package, team, and slider images
-- **Database Management** - PostgreSQL with Prisma ORM
-- **User Authentication** - Session-based admin login
+- **Mobile Responsive Design**: Fully optimized for mobile and tablet devices with a custom hamburger menu and responsive layouts.
+- **Persistent Sessions**: Powered by `connect-pg-simple` and PostgreSQL to ensure you stay logged in, even in serverless environments like Vercel.
+- **Admin Dashboard**: Comprehensive management of Logos, Navbars, Sliders, Packages, and dynamic page content.
+- **Multi-language Support**: Built-in support for multiple languages (English & Armenian).
+- **Secure Authentication**: Session-based login with encrypted passwords and manual persistence checks.
+- **Vercel Optimized**: Pre-configured with `trust proxy` and secure cookie settings for instant deployment.
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - **Backend**: Node.js, Express.js
 - **Database**: PostgreSQL (Prisma ORM)
-- **Frontend**: EJS templates
-- **Authentication**: bcrypt, express-session
-- **File Upload**: Multer
+- **Session Management**: express-session with connect-pg-simple
+- **Frontend**: EJS (Embedded JavaScript) Templates
+- **Styling**: Vanilla CSS with @media queries
+- **File Upload**: Multer (Local Disk Storage)
 
-## Installation
+## 📦 Installation
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/HamletTumasyan/travel-backend.git
-cd travel-backend
 
 # Install dependencies
 npm install
 
-# Setup environment variables
-cp .env.example .env
-# Edit .env with your database credentials and secret key
+# Setup Environment Variables
+# Create a .env file based on the environment section below
 
-# Run migrations
-npx prisma migrate dev
+# Database Setup
+# Ensure your PostgreSQL database has the required 'session' table
+# Run: npx prisma db push (to sync other models)
 
-# Start development server
+# Start Development
 npm run dev
 ```
 
-## Environment Variables
+## 🌍 Environment Variables
 
-Create a `.env` file with:
+Create a `.env` file in the project root:
 
-```
-DATABASE_URL=your_postgresql_connection_string
-SECRET_KEY=your_secret_key
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=your_password
-PORT=3000
-```
-
-## Project Structure
-
-```
-├── controllers/     # Route handlers
-├── routes/         # API routes
-├── middleware/     # Authentication, uploads, etc.
-├── views/          # EJS templates
-├── public/         # Static assets (CSS, JS, images)
-├── prisma/         # Database schema & migrations
-└── app.js          # Main application file
+```env
+DATABASE_URL="your_postgresql_connection_string"
+SECRET_KEY="your_secure_random_string"
+ADMIN_USERNAME="admin"
+ADMIN_PASSWORD="your_password"
+PORT=8000
+NODE_ENV="development"
 ```
 
-## Available Routes
+## 🏗 Project Structure
 
-### Admin Routes
-- `GET /admin/logo` - Manage logo
-- `GET /admin/navbar` - Manage navigation
-- `GET /admin/langs` - Manage languages
-- `GET /admin/home-page-sliders` - Manage sliders
-- `GET /admin/home-page-packages` - Manage packages
-- `GET /admin/about-page` - Manage about page
-- `GET /admin/contact-page` - Manage contact form
-- `GET /admin/footer-labels` - Manage footer
+```text
+├── controllers/    # Shared logic and route handlers
+├── routes/         # Express routing definitions
+├── middlewares/    # Auth, Session, and Upload configurations
+├── views/          # EJS templates and partials
+├── public/         # Static assets (CSS, JS, Images)
+├── prisma/         # Database models and migrations
+├── app.js          # Core application entry point
+└── vercel.json     # Vercel deployment configuration
+```
 
-### API Routes
-- `GET /api` - Get all website data
+## 🛣 Admin Modules
 
-## Future Improvements
+- **Navigation**: `/admin/navbar`
+- **Identity**: `/admin/logo` & `/admin/langs`
+- **Content**: `/admin/home-page-sliders` & `/admin/home-page-packages`
+- **Pages**: `/admin/about-page` & `/admin/contact-page`
+- **Footer**: `/admin/footer-labels`
 
-- [ ] Add input validation middleware
-- [ ] Implement file upload to cloud storage (Cloudinary/S3)
-- [ ] Add Redis for session management
-- [ ] Enhance security with CSRF protection
-- [ ] Add error logging system
-- [ ] Create API documentation
-
-## License
+## 📄 License
 
 MIT
 
-## Author
+## 👤 Author
 
-Hamlet Tumasyan
+**Hamlet Tumasyan**

@@ -1,5 +1,5 @@
 import express from "express";
-import path from "path";  
+import path from "path";
 import logger from "morgan";
 import expressLayouts from "express-ejs-layouts";
 import appRouter from "./routes/index.js";
@@ -36,5 +36,4 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// Keep-alive heartbeat to prevent unintended "clean exit" on some Node versions
-setInterval(() => {}, 60000);
+setInterval(() => { }, 60000);
